@@ -1,0 +1,707 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="system.html">众包系统</a></li>
+            <li><a href="communicatePage.html">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html" class="active">个人中心</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+    <section id="aboutSelf">
+        <aside class="selfinfor">
+            <div><img src="3.jpg" id="headImg"></div>
+            <ul class="list">
+                <li><input type="file" value="上传图片" title="选择图片" id="uploadPhoto"><span>上传图片</span></li>
+                <li>汕大百事通</li>
+                <li class="activeLi" onclick="displayInfor('2')">个人资料</li>
+                <li onclick="displayInfor('3')">我的任务</li>
+                <li onclick="displayInfor('4')">我的信息</li>
+                <li onclick="displayInfor('5')">专家界面</li>
+                <li onclick="displayInfor('6')">积分商城</li>
+            </ul>
+        </aside>
+        <article class="selfInforDetail">
+            <main id="information">
+                <ul>
+                    <li>用户名：</li>
+                    <li>账号：</li>
+                    <li>简介：</li>
+                    <li>积分：</li>
+                    <li>邮箱：</li>
+                </ul>
+                <ul id="inforGroup">
+                    <li>汕大百事通</li>
+                    <li>137****6666</li>
+                    <li>我太难了</li>
+                    <li>9999</li>
+                    <li>17mczhu@stu.edu.cn</li>
+                </ul>
+                <input type="button" value="修改密码" id="editSelfInfor">
+            </main>
+
+            <main id="editInfor">
+                <div id="coverPage"></div>
+                <div id="detail">
+                    <ul id="inforNameGroup">
+                        <li>用户名：</li>
+                        <li>账号：</li>
+                        <li>简介：</li>
+                        <li>邮箱：</li>
+                    </ul>
+                    <ul id="inforGroup2">
+                        <li><input type="text" class="nameOfUser"></li>
+                        <li><input type="tel" class="telephone"></li>
+                        <li><input class="intrduction"></li>
+                        <li><input type="email" class="email"></li>
+                    </ul>
+                    <input type="button" value="确认修改" id="confromEdit">
+                </div>
+                <span class="cancleBtn" id="cancleEdit">X</span>
+            </main>
+
+            <main id="myTask">
+                <select name="sortRule" class="select">
+                    <option>全部任务</option>
+                    <option>待抄录</option>
+                    <option>待审核</option>
+                    <option>待修改</option>
+                    <option>已完成</option>
+                </select>
+                <section class="letterDisplay">
+                    <div class="column">
+                        <div class="infor">
+                            <p>【侨批名称】001</p>
+                            <img src="image7.jpg">
+                            <p>1955年</p>
+                            <p>难度：★★★ </p>
+                            <p>积分：5</p>
+                        </div>
+                        <input type="button" class="undertakeBtn" value="开始抄录"></input>
+                    </div>
+                    <div class="column">
+                        <div class="infor">
+                            <p>【侨批名称】001</p>
+                            <img src="image7.jpg">
+                            <p>1955年</p>
+                            <p>难度：★★★ </p>
+                            <p>积分：5</p>
+                        </div>
+                        <input type="button" class="undertakeBtn" value="开始抄录"></input>
+
+                    </div>
+                    <div class="column">
+                        <div class="infor">
+                            <p>【侨批名称】001</p>
+                            <img src="image7.jpg">
+                            <p>1955年</p>
+                            <p>难度：★★★ </p>
+                            <p>积分：5</p>
+                        </div>
+                        <input type="button" class="undertakeBtn" value="开始抄录"></input>
+
+                    </div>
+                    <div class="column">
+                        <div class="infor">
+                            <p>【侨批名称】002</p>
+                            <img src="image7.jpg">
+                            <p>1955年</p>
+                            <p>难度：★★★ </p>
+                            <p>积分：5</p>
+                        </div>
+                        <input type="button" class="undertakeBtn" value="开始抄录"></input>
+                    </div>
+                </section>
+
+                <section id="inforDetail">
+                    <div id="coverPage"></div>
+                    <div id="detail">
+                        <p>
+                            【侨批名称】001
+                        </p>
+                        <div class="detailInformation">
+                            <div class="letterPhoto">
+                                <img src="image7.jpg">
+                                <div class="photoInfor">
+                                    <p>1955年</p>
+                                    <p>难度：★★★ </p>
+                                    <p>积分：5</p>
+                                </div>
+                            </div>
+                            <div class="writeArea">
+                                <textarea type="text"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="cancleBtn">X</span>
+                    <div class="btnGroup">
+                        <input type="button" value="保存" id="save">
+                        <input type="button" value="提交" id="submit">
+                    </div>
+                </section>
+
+            </main>
+
+            <section class="successInform">
+                <div id="inform">
+                    <p class="cancle">X</p>
+                    <p id="displayContent">提交成功！</p>
+                </div>
+            </section>
+
+            <main id="myMessage">
+                <select class="select">
+                    <option>全部消息</option>
+                    <option>系统通知</option>
+                    <option>我的赞</option>
+                    <option>我的回复</option>
+                </select>
+                <section class="messages">
+                    <div class="eachMessage" onclick="showMessageDetail()">
+                        <img src="3.jpg">
+                        <div>
+                            <h2>系统通知</h2>
+                            <h3 class="time">2019/10/10</h3>
+                            <p>
+                                尊敬的用户：
+                                您好，我们诚挚的通知您，你中了999999999元超级大奖，请择日来领奖
+                                我是共产主义接班人，学习雷锋好榜样，忠于革命忠于党。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="eachMessage" onclick="showMessageDetail()">
+                        <img src="3.jpg">
+                        <div>
+                            <h2>系统通知</h2>
+                            <h3 class="time">2019/10/10</h3>
+                            <p>
+                                尊敬的用户：
+                                您好，我们诚挚的通知您，你中了999999999元超级大奖，请择日来领奖
+                                我是共产主义接班人，学习雷锋好榜样，忠于革命忠于党。
+                            </p>
+                        </div>
+                    </div>
+                    <div class="eachMessage">
+                        <img src="3.jpg">
+                        <div>
+                            <h2>正尧大哥 回复 您</h2>
+                            <h3 class="time">2019/10/10</h3>
+                            <p>
+                                我一定可以认认真真完成所有后台程序的
+                            </p>
+                        </div>
+                    </div>
+                    <div class="eachMessage">
+                        <img src="3.jpg">
+                        <div>
+                            <h2>孟成菜鸡 赞同了 您</h2>
+                            <h3 class="time">2019/10/10</h3>
+                            <p>
+                                前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <main id="messageDetailPage">
+                <div class="eachMessage">
+                    <img src="3.jpg">
+                    <div>
+                        <h2>孟成菜鸡 赞同了 您</h2>
+                        <h3 class="time">2019/10/10</h3>
+                        <p>
+                            前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~
+                            前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~
+                            前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~
+                            前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~前端会很完美很迅速的搞出来的yeah~
+                        </p>
+                    </div>
+                </div>
+                <div class="responseText">
+                    <textarea></textarea>
+                </div>
+                <div class="responseBtn">
+                    <input type="button" value="回复">
+                </div>
+            </main>
+
+            <main id="expert">
+                <div id="applyExpert">
+                    您还不是专家哦，点击进行<a href="#applyPage" class="openApplyExpert">专家认证</a>
+                </div>
+            </main>
+
+            <section id="inforDetail" class="applyExpert">
+                <div id="coverPage"></div>
+                <div id="detail">
+                    <div class="applyDetail">
+                        <div>个人简历上传：</div>
+                        <div class="file">
+                            <input type="file" id="uploadFile">
+                            <input type="button" value="上传文件">
+                        </div>
+                        <div>申请理由：</div>
+                        <div class="reason">
+                            <textarea id="applyReason"></textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="button" value="提交" id="submitBtn">
+                        </div>
+                    </div>
+                </div>
+                <span class="cancleBtn cancelApplyExpert">X</span>
+            </section>
+
+
+            <main id="expertAlready">
+                <select class="select" id="expertTasks">
+                    <optgroup label="未领取任务">
+                        <option>领取任务</option>
+                    </optgroup>
+                    <optgroup label="已领取任务">
+                        <option>全部任务</option>
+                        <option>待审核</option>
+                        <option>已完成</option>
+                    </optgroup>
+                </select>
+                <main id="waitingTaken">
+                    <section class="letterDisplay">
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="领取"
+                                onclick="displayInform(this)"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeBtn" value="领取"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeBtn" value="领取"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeBtn" value="领取"></input>
+                        </div>
+                    </section>
+                </main>
+                <main id="allTasks">
+                    <section class="letterDisplay">
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="开始审核"
+                                onclick="displayInform(this)"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="开始审核"
+                                onclick="displayInform(this)"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="已审核"></input>
+                        </div>
+                    </section>
+                </main>
+                <main id="waitingJudged">
+                    <section class="letterDisplay">
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="开始审核"
+                                onclick="startJudge(this)"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="开始审核"
+                                onclick="startJudge(this)"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="开始审核"
+                                onclick="startJudge(this)"></input>
+                        </div>
+                    </section>
+                </main>
+
+                <main id="completedTask">
+                    <section class="letterDisplay">
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="已完成"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="已完成"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="已完成"></input>
+                        </div>
+                        <div class="column">
+                            <div class="infor">
+                                <p>【侨批名称】001</p>
+                                <img src="image7.jpg">
+                                <p>1955年</p>
+                                <p>难度：★★★ </p>
+                                <p>积分：5</p>
+                                <p>抄录用户：汕大百事通</p>
+                                <P>提交日期：2019/10/14</P>
+                            </div>
+                            <input type="button" class="undertakeButton" value="已完成"></input>
+                        </div>
+                    </section>
+                </main>
+
+            </main>
+
+            <main id="shop"></main>
+        </article>
+    </section>
+    <script>
+        var list = document.getElementsByClassName("list")[0];
+        var listLi = list.getElementsByTagName("li");
+        var undertakeBtn = document.getElementsByClassName("undertakeBtn");
+        var inforDetail = document.getElementById("inforDetail");
+        var cancleBtn = inforDetail.getElementsByClassName("cancleBtn")[0];
+        var submit = document.getElementById("submit");
+        var successInform = document.getElementsByClassName("successInform")[0];
+        var cancle = document.getElementsByClassName("cancle")[0];
+        var textArea = document.getElementsByClassName("writeArea")[0].getElementsByTagName("textarea")[0];
+        var information = document.getElementById("information");
+        var myTask = document.getElementById("myTask");
+        var myMessage = document.getElementById("myMessage");
+        var expert = document.getElementById("expert");
+        var openApplyExpert = document.getElementsByClassName("openApplyExpert")[0];
+        var applyExpert = document.getElementsByClassName("applyExpert")[0];
+        var cancelApplyExpert = document.getElementsByClassName("cancelApplyExpert")[0];
+        var uploadFile = document.getElementById("uploadFile");
+        var applyReason = document.getElementById("applyReason");
+        var submitBtn = document.getElementById("submitBtn");
+        var displayContent = document.getElementById("displayContent");
+        var applyExpert = document.getElementsByClassName("applyExpert")[0];
+        var messageDetailPage = document.getElementById("messageDetailPage");
+        var save = document.getElementById("save");
+        var uploadPhoto = document.getElementById("uploadPhoto");
+        var headImg = document.getElementById("headImg");
+        var expertAlready = document.getElementById("expertAlready");
+        var expertTasks = document.getElementById("expertTasks");
+        var waitingTaken = document.getElementById("waitingTaken");
+        var allTasks = document.getElementById("allTasks");
+        var waitingJudged = document.getElementById("waitingJudged");
+        var completedTask = document.getElementById("completedTask");
+        var editSelfInfor = document.getElementById("editSelfInfor");
+        var cancleEdit = document.getElementById("cancleEdit");
+        var inforGroup = document.getElementById("inforGroup");
+        var nameOfUser = document.getElementsByClassName("nameOfUser")[0];
+        var telephone = document.getElementsByClassName("telephone")[0];
+        var intrduction = document.getElementsByClassName("intrduction")[0];
+        var email = document.getElementsByClassName("email")[0];
+        var editInfor = document.getElementById("editInfor");
+        var inforGroup2 = document.getElementById("inforGroup2");
+        var cancleEdit = document.getElementById("cancleEdit");
+        var confromEdit = document.getElementById("confromEdit");
+        var choosedBtn = 0, saveBtnClicked = false;
+
+        uploadPhoto.addEventListener("change", function () {
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                headImg.src = evt.target.result;
+                image = evt.target.result;
+            }
+            reader.readAsDataURL(uploadPhoto.files[0]);
+        })
+
+        save.onclick = function () {
+            saveBtnClicked = true;
+        }
+        cancleBtn.onclick = function () {
+            textArea.value = saveBtnClicked === true ? textArea.value : "";
+            inforDetail.style.display = "none";
+        }
+
+        for (let i = 0; i < undertakeBtn.length; i++)
+            undertakeBtn[i].onclick = function () {
+                inforDetail.style.display = "block";
+                choosedBtnNumber = i;
+            }
+
+        //用于编辑个人信息
+        let inforArr = [nameOfUser, telephone, intrduction, null, email];
+        let childsLi = inforGroup.getElementsByTagName("li");
+
+        editSelfInfor.onclick = function () {
+            for (let i = 0; i < childsLi.length; i++) {
+                if (inforArr[i] === null) continue;
+                inforArr[i].value = childsLi[i].innerHTML;
+            }
+            editInfor.style.display = "block";
+        }
+        cancleEdit.addEventListener("click", hiddenEdit);
+        function hiddenEdit() {
+            nameOfUser.value = "";
+            telephone.value = "";
+            intrduction.value = '';
+            email.value = "";
+            editInfor.style.display = "none";
+        }
+        confromEdit.addEventListener("click", function () {
+            if (!email.value || !nameOfUser.value || !telephone.value || !intrduction.value) {
+                alert("请把信息填写完整");
+            }
+            else {
+                for (let i = 0; i < childsLi.length; i++) {
+                    if (inforArr[i] === null) continue;
+                    childsLi[i].innerHTML = inforArr[i].value;
+                }
+                listLi[1].innerHTML = inforArr[0].value
+                hiddenEdit();
+            }
+        })
+
+        function displayInfor(num) {
+            list.getElementsByClassName("activeLi")[0].classList.remove("activeLi");
+            event.target.classList.add("activeLi");
+            switch (num) {
+                case '2':
+                    {
+                        information.style.display = "flex";
+                        myTask.style.display = "none";
+                        myMessage.style.display = "none";
+                        expert.style.display = "none";
+                        messageDetailPage.style.display = "none";
+                        expertAlready.style.display = "none";
+                    } break;
+                case '3':
+                    {
+                        information.style.display = "none";
+                        myTask.style.display = "block";
+                        myMessage.style.display = "none";
+                        expert.style.display = "none";
+                        messageDetailPage.style.display = "none";
+                        expertAlready.style.display = "none";
+                    } break;
+                case '4':
+                    {
+                        information.style.display = "none";
+                        myTask.style.display = "none";
+                        myMessage.style.display = "block";
+                        messageDetailPage.style.display = "none";
+                        expert.style.display = "none";
+                        expertAlready.style.display = "none";
+                    } break;
+                case '5':
+                    {
+                        information.style.display = "none";
+                        myTask.style.display = "none";
+                        myMessage.style.display = "none";
+                        messageDetailPage.style.display = "none";
+                        expert.style.display = "block";
+                        expertAlready.style.display = "none";
+                    } break;
+            }
+
+        }
+
+        submit.onclick = function () {
+            displayContent.innerHTML = "提交成功！";
+            successInform.style.display = "block";
+            textArea.value = "";
+            undertakeBtn[choosedBtnNumber].setAttribute("disabled", "disabled");
+            undertakeBtn[choosedBtnNumber].classList.add("disabled");
+        }
+
+        cancle.onclick = function () {
+
+            successInform.style.display = "none";
+            inforDetail.style.display = "none";
+            applyExpert.style.display = "none";
+            if(displayContent.innerHTML == "提交成功！请耐心等待审核结果")
+            expertAlready.style.display = "block";
+            
+            textArea.value = "";
+        }
+        openApplyExpert.onclick = function () {
+            applyExpert.style.display = "block";
+        }
+        cancelApplyExpert.onclick = function () {
+            applyExpert.style.display = "none";
+            // uploadFile.value = "";
+            applyReason.value = "";
+        }
+        submitBtn.onclick = function () {
+            displayContent.innerHTML = "提交成功！请耐心等待审核结果";
+            successInform.style.display = "block";
+            // uploadFile.value = "";
+            applyReason.value = "";
+
+            expert.style.display = "none";
+            // expertAlready.style.display = "block";
+        }
+        function showMessageDetail() {
+            messageDetailPage.style.display = "block";
+            myMessage.style.display = "none";
+        }
+        function displayInform(eve) {
+
+            displayContent.innerHTML = '成功领取到"审核任务"中！';
+            successInform.style.display = "block";
+            eve.setAttribute("disabled", "disabled");
+            eve.classList.add("disabled");
+        }
+        expertTasks.onchange = function () {
+            let taskChoice = expertTasks.value;
+            switch (taskChoice) {
+                case "领取任务":
+                    {
+                        waitingTaken.style.display = "block";
+                        waitingJudged.style.display = "none";
+                        allTasks.style.display = "none";
+                        completedTask.style.display = "none";
+                    } break;
+                case "全部任务":
+                    {
+                        waitingTaken.style.display = "none";
+                        waitingJudged.style.display = "none";
+                        allTasks.style.display = "block";
+                        completedTask.style.display = "none";
+                    } break;
+                case "待审核":
+                    {
+                        waitingTaken.style.display = "none";
+                        waitingJudged.style.display = "block";
+                        allTasks.style.display = "none";
+                        completedTask.style.display = "none";
+                    } break;
+                case "已完成":
+                    {
+                        waitingTaken.style.display = "none";
+                        waitingJudged.style.display = "none";
+                        allTasks.style.display = "none";
+                        completedTask.style.display = "block";
+                    } break;
+            }
+        }
+        function startJudge(eve) {
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li ><a href="" class = "active">众包系统</a></li>
+            <li><a href="communicatePage.html">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html">个人中心</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+    <section id="CrowdsourcingSystem">
+        <select name="sortRule" class="select">
+            <option>难度等级排序</option>
+            <option>由高到低</option>
+            <option>由低到高</option>
+        </select>
+        <section class="letterDisplay">
+            <div class="column">
+                <div class="infor">
+                    <p>【侨批名称】001</p>
+                    <img src="image7.jpg">
+                    <p>1955年</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <input type="button" class="undertakeBtn" value="领取"></input>
+            </div>
+            <div class="column">
+                <div class="infor">
+                    <p>【侨批名称】002</p>
+                    <img src="image7.jpg">
+                    <p>1955年</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <input type="button" class="undertakeBtn" value="领取"></input>
+            </div>
+            <div class="column">
+                <div class="infor">
+                    <p>【侨批名称】003</p>
+                    <img src="image7.jpg">
+                    <p>1955年</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <input type="button" class="undertakeBtn" value="领取"></input>
+            </div>
+            <div class="column">
+                <div class="infor">
+                    <p>【侨批名称】003</p>
+                    <img src="image7.jpg">
+                    <p>1955年</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <input type="button" class="undertakeBtn" value="领取"></input>
+            </div>
+            <div class="column">
+                <div class="infor">
+                    <p>【侨批名称】003</p>
+                    <img src="image7.jpg">
+                    <p>1955年</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <input type="button" class="undertakeBtn" value="领取"></input>
+            </div>
+        </section>
+    </section>
+    <section class="successInform">
+        <div id="inform">
+            <p class ="cancle">X</p>
+            <p>已成功领取到“我的任务”中！</p>
+        </div>
+    </section>
+    <section id="inforDetail">
+        <div id = "coverPage"></div>
+        <div id="detail">
+            <p>
+                【侨批名称】001
+            </p>
+            <div class ="detailInformation">
+                <div class = "letterInfor">
+                    <p>年份：1955年</p>
+                    <p>发出地址：吉隆坡</p>
+                    <p>接收地址：汕头大学</p>
+                    <p>难度：★★★ </p>
+                    <p>积分：5</p>
+                </div>
+                <div class = "letterPhoto">
+                    <img src = "image7.jpg">
+                </div>
+            </div>
+        </div>
+        <span class = "cancleBtn cancle">X</span>
+    </section>
+    <script>
+        var undertakeBtn = document.getElementsByClassName("undertakeBtn");
+        var successInform = document.getElementsByClassName("successInform")[0];
+        var cancle = document.getElementsByClassName("cancle");
+        var CrowdsourcingSystem = document.getElementById("CrowdsourcingSystem");
+        var infor = document.getElementsByClassName("infor");
+        var inforDetail = document.getElementById("inforDetail");
+
+        var navbar = document.getElementsByClassName("navbar")[0];
+        window.onload = function()
+        {
+            var clientwidth = document.body.clientWidth;
+            navbar.style.width = clientwidth;
+         
+        }
+
+        for (let i = 0; i < infor.length; i++)
+            infor[i].onclick = function () {
+                inforDetail.style.display = "block";
+                document.body.style.overflow = "hidden";
+            }
+
+
+        cancle[0].onclick = function () {
+            successInform.style.display = "none";
+        }
+        cancle[1].onclick = function()
+        {
+            inforDetail.style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+
+        for (let i = 0; i < undertakeBtn.length; i++)
+            undertakeBtn[i].onclick = function (event) {
+                successInform.style.display = "block";
+                event.target.setAttribute("disabled", "disabled");
+                event.target.classList.add("disabled");
+            }
+    </script>
+</body>
+
+</html>

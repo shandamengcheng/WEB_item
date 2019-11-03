@@ -1,0 +1,140 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="../layui-v2.5.5/layui/css/layui.css">
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="system.html">众包系统</a></li>
+            <li><a href="communicatePage.html" class="active">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html">个人中心</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+
+    <section id="wholePage">
+        <main>
+            <span>帖子名称：</span>
+            <span>帖子内容：</span>
+            <input type="text" class="messageHeader">
+            <textarea class="messageContent"></textarea>
+            <div class="imgContainer"></div>
+            <input type="button" value="添加图片" id="addMessagePhoto">
+            <input type="file" class="underBtn" title="添加图片">
+            <!-- 
+            <div class="layui-upload">
+                <button type="button" class="layui-btn" id="test2">多图片上传</button>
+                <blockquote class="layui-elem-quote layui-quote-nm" style="margin-top: 10px;">
+                    预览图：
+                    <div class="layui-upload-list" id="demo2"></div>
+                </blockquote>
+            </div> -->
+            <input type="button" value="发布" id="submitText">
+        </main>
+    </section>
+    <section class="successInform">
+        <div id="inform">
+            <p class="cancle">X</p>
+            <p>发布成功！</p>
+        </div>
+    </section>
+
+    //仍存在的问题：不能连续添加同一张图片
+
+    <!-- <script src="../layui-v2.5.5/layui/layui.js"></script> -->
+    <script>
+        // layui.use('upload', function () {
+        //     var upload = layui.upload;
+
+        //     //执行实例
+        //     var uploadInst = upload.render({
+        //         elem: '#test2' //绑定元素
+        //         , url: '/api/upload/' //上传接口
+        //         , done: function (res) {
+        //             //上传完毕回调
+        //         }
+        //         , error: function () {
+        //             //请求异常回调
+
+        //         }
+        //     });
+        // });
+
+        var submitText = document.getElementById("submitText");
+        var successInform = document.getElementsByClassName("successInform")[0];
+        var cancle = document.getElementsByClassName("cancle")[0];
+        var messageHeader = document.getElementsByClassName("messageHeader")[0];
+        var messageContent = document.getElementsByClassName("messageContent")[0];
+        var imgContainer = document.getElementsByClassName("imgContainer")[0];
+        var addMessagePhoto = document.getElementById("addMessagePhoto");
+        var underBtn = document.getElementsByClassName("underBtn")[0];
+        var imgCount = 0; //用户选择的图片数量；
+        submitText.onclick = function () {
+            if (!messageHeader.value || !messageContent.value) {
+                alert("请填写完整");
+            }
+            else {
+                successInform.style.display = "block";
+                // localStorage.clear();
+                var obj = new Object();
+                obj.header = messageHeader.value;
+                obj.content = messageContent.value;
+                obj.date = new Date().toLocaleDateString();
+                let num = localStorage.length;
+                localStorage.setItem("data"+num,JSON.stringify(obj));
+                
+                // localStorage.clear();
+                // localStorage.addNews = true;
+                // localStorage.setItem("header", messageHeader.value);
+                // localStorage.setItem("content", messageContent.value);
+                // for (let i = 0; i < imgContainer.children.length; i++)
+                //     localStorage.setItem("src" + i, imgContainer.children[i].getAttribute("src"));
+                // localStorage.setItem("date", new Date().toLocaleDateString());
+            }
+
+        }
+        cancle.onclick = function () {
+            successInform.style.display = "none";
+            messageHeader.value = "";
+            messageContent.value = "";
+            imgContainer.innerHTML = "";
+            imgCount = 0;
+            // window.open("communicatePage.html","_self");
+            window.history.back();
+        }
+        underBtn.onchange = function () {
+            imgCount++;
+            let file = underBtn.files[0];
+            if (imgCount <= 6) {
+
+                let img = document.createElement("img");
+                img.classList.add("obj");
+                img.file = file;
+                imgContainer.appendChild(img);
+
+                //创建FileReader来处理异步的图片加载并把他赋给img元素
+                let reader = new FileReader();
+                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                reader.readAsDataURL(file);
+            }
+            else {
+                alert("已达最大限额!");
+            }
+        }
+
+    </script>
+</body>
+
+</html>

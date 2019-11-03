@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="system.html">众包系统</a></li>
+            <li><a href="communicatePage.html" class="active">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html">个人中心</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+    <section id="communicate">
+        <div class="searchArea">
+            <input type="text" class="searchInput">
+            <input type="button" value="搜索" class="searchBtn">
+            <span>发布日期</span>
+            <span>热度</span>
+        </div>
+        <div class="contentArea">
+            <div class="floorOwner">
+                <img src="hdphoto.png">
+                <p class="name">帅气的小朱哥</p>
+                <input type="button" value="发布帖子" class="btnAbout" onclick="window.open('sendContext.html','_self')">
+                <input type="button" value="管理界面" class="btnAbout" onclick="window.open('mainComuniPage.html','_self')">
+            </div>
+            <div class="messageArea">
+                <section class="news">
+                    <header>
+                        <span>★ 姜欣彤承认和陈晓乳的恋情</span><span>2019/9/23</span>
+                    </header>
+                    <article>
+                        <main>
+                            新恋情！新恋情！
+                            姜美丽在东门·······
+                        </main>
+                    </article>
+                </section>
+                <section class="news">
+                    <header>
+                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                    </header>
+                    <article>
+                        <main>
+                            新恋情！新恋情！
+                            姜美丽在东门·······
+                        </main>
+                    </article>
+                </section>
+                <section class="news">
+                    <header>
+                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                    </header>
+                    <article>
+                        <main>
+                            新恋情！新恋情！
+                            姜美丽在东门·······
+                        </main>
+                    </article>
+                </section>
+                <section class="news">
+                    <header>
+                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                    </header>
+                    <article>
+                        <main>
+                            新恋情！新恋情！
+                            姜美丽在东门·······
+                        </main>
+                    </article>
+                </section>
+                <section class="news">
+                    <header>
+                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                    </header>
+                    <article>
+                        <main>
+                            新恋情！新恋情！
+                            姜美丽在东门·······
+                        </main>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </section>
+    <script>
+        var messageArea = document.getElementsByClassName("messageArea")[0];
+        // alert(localStorage.object);
+        // messageArea.append(localStorage.object);
+        // window.onload = function () {
+            // if (localStorage.getItem("addNews") == "true") {
+            for (let i = localStorage.length-1; i >= 0; i--) {
+                let name = localStorage.key(i);
+                let str = localStorage.getItem(name);
+                console.log(i+"" + str);
+                let obj = JSON.parse(str);
+                let section = document.createElement("section");
+                section.classList.add("news");
+                let header = document.createElement("header");
+                let span1 = document.createElement("span");
+                let a = document.createElement("a");
+                var textNode = document.createTextNode(obj.header);
+                a.appendChild(textNode);
+                span1.appendChild(a);
+                let span2 = document.createElement("span");
+                textNode = document.createTextNode(obj.date);
+                span2.appendChild(textNode);
+                header.append(span1, span2);
+                let article = document.createElement("article");
+                let main = document.createElement("main");
+                textNode = document.createTextNode(obj.content);
+                main.append(textNode);
+                article.appendChild(main);
+                section.append(header, article);
+                // let firstEle = messageArea.firstElementChild.getElementsByTagName("main")[0];
+                messageArea.insertBefore(section,messageArea.firstElementChild);
+                // messageArea.appendChild(section);
+                // localStorage.clear();
+            }
+
+            // }
+        // }
+    </script>
+</body>
+
+</html>

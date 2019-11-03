@@ -1,0 +1,131 @@
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="system.html">众包系统</a></li>
+            <li><a href="communicatePage.html">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html">个人中心</a></li>
+            <li><a href="login.html" class="active">登录</a></li>
+        </ul>
+    </nav>
+    <section>
+        <div id="login">
+            <img src="hdphoto.png">
+            <div>
+                <label>账号：</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>密码：</label>
+                <input type="text">
+            </div>
+            <div>
+                <input type="button" value="找回密码">
+                <input type="button" value="注册" id = "changeToRegister">
+                <input type= "button" value = "登录" id = "loginBtn">
+            </div>
+        </div>
+        <div id="register">
+            <ul>
+                <li>用户名</li>
+                <li>账号</li>
+                <li>验证码</li>
+                <li>密码</li>
+                <li>确认密码</li>
+            </ul>
+            <ul>
+                <li>
+                    <input type = "text">
+                </li>
+                <li>
+                    <input placeholder="手机号码/邮箱">
+                </li>
+                <li class = "special">
+                    <input type = "text">
+                    <input type =  "button" value ="发送验证码">
+                </li>
+                <li>
+                    <input type = "password">
+                </li>
+                <li>
+                    <input type = "password">
+                </li>
+            </ul>
+            <div>
+                <input type = "button" id = "registerBtn" value = "注册">
+            </div>
+        </div>
+    </section>
+    <section class="successInform">
+            <div id="inform">
+                <p class="cancle">X</p>
+                <p id = "successContent">
+                    注册成功！点击进行<a href = "#login" class = "changeToLogin">登录</a>
+                </p>
+            </div>
+        </section>
+    <script>
+        var registerBtn = document.getElementById("registerBtn");
+        var successInform = document.getElementsByClassName("successInform")[0];
+        var cancle = document.getElementsByClassName("cancle")[0];
+        var login = document.getElementById("login");
+        var register = document.getElementById("register");
+        var changeToRegister = document.getElementById("changeToRegister");
+        var loginBtn = document.getElementById("loginBtn");
+        var successContent = document.getElementById("successContent");
+        var changeToLogin = document.getElementsByClassName("changeToLogin")[0];
+
+
+        loginBtn.onclick = function(){
+            // successContent.innerHTML = "登录成功";
+            // successInform.style.display = "block";
+        }
+
+        registerBtn.onclick = function()
+        {
+            // successContent.innerHTML = '注册成功！点击进行<a href = "#login" class = "changeToLogin">登录</a>';
+            successInform.style.display = "block";
+        }
+
+        cancle.onclick = function()
+        {
+            successInform.style.display = "none";
+            // successContent.innerHTML = '注册成功！点击进行<a href = "" class = "changeToLogin">登录</a>'; 
+            // changeToLogin = document.getElementsByClassName("changeToLogin")[0];
+        }
+
+        changeToRegister.onclick = function()
+        {
+            register.style.display = "flex";
+            login.style.display = "none";
+            successInform.style.display = "none";
+        }
+        // changeToLogin.addEventListener("click",function()
+        // {
+        //     register.style.display = "none";
+        //     login.style.display = "block";
+        //     successInform.style.display = "none";
+        // });
+
+        changeToLogin.onclick = function()
+        {
+            register.style.display = "none";
+            login.style.display = "block";
+            successInform.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
