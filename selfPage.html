@@ -534,11 +534,13 @@
         cancleBtn.onclick = function () {
             textArea.value = saveBtnClicked === true ? textArea.value : "";
             inforDetail.style.display = "none";
+            document.body.style.overflow = "auto";
         }
 
         for (let i = 0; i < undertakeBtn.length; i++)
             undertakeBtn[i].onclick = function () {
                 inforDetail.style.display = "block";
+                document.body.style.overflow = "hidden";
                 choosedBtnNumber = i;
             }
 
