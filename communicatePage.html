@@ -36,7 +36,7 @@
             <div class="messageArea">
                 <section class="news">
                     <header>
-                        <span>★ 姜欣彤承认和陈晓乳的恋情</span><span>2019/9/23</span>
+                        <span><a href=" " class = "childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
                     </header>
                     <article>
                         <main>
@@ -47,7 +47,7 @@
                 </section>
                 <section class="news">
                     <header>
-                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                        <span><a href=" " class = "childA">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
                     </header>
                     <article>
                         <main>
@@ -58,7 +58,7 @@
                 </section>
                 <section class="news">
                     <header>
-                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                        <span><a href=" " class = "childA">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
                     </header>
                     <article>
                         <main>
@@ -69,7 +69,7 @@
                 </section>
                 <section class="news">
                     <header>
-                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                        <span><a href=" " class = "childA">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
                     </header>
                     <article>
                         <main>
@@ -80,7 +80,7 @@
                 </section>
                 <section class="news">
                     <header>
-                        <span><a href="">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
+                        <span><a href="mainComuniPage.html" class = "childA">★ 姜欣彤承认和陈晓乳的恋情 </a></span><span>2019/9/23</span>
                     </header>
                     <article>
                         <main>
@@ -94,39 +94,68 @@
     </section>
     <script>
         var messageArea = document.getElementsByClassName("messageArea")[0];
+        var news = document.getElementsByClassName("news");
+        var childA = document.getElementsByClassName("childA");
         // alert(localStorage.object);
         // messageArea.append(localStorage.object);
         // window.onload = function () {
-            // if (localStorage.getItem("addNews") == "true") {
-            for (let i = localStorage.length-1; i >= 0; i--) {
-                let name = localStorage.key(i);
-                let str = localStorage.getItem(name);
-                console.log(i+"" + str);
-                let obj = JSON.parse(str);
-                let section = document.createElement("section");
-                section.classList.add("news");
-                let header = document.createElement("header");
-                let span1 = document.createElement("span");
-                let a = document.createElement("a");
-                var textNode = document.createTextNode(obj.header);
-                a.appendChild(textNode);
-                span1.appendChild(a);
-                let span2 = document.createElement("span");
-                textNode = document.createTextNode(obj.date);
-                span2.appendChild(textNode);
-                header.append(span1, span2);
-                let article = document.createElement("article");
-                let main = document.createElement("main");
-                textNode = document.createTextNode(obj.content);
-                main.append(textNode);
-                article.appendChild(main);
-                section.append(header, article);
-                // let firstEle = messageArea.firstElementChild.getElementsByTagName("main")[0];
-                messageArea.insertBefore(section,messageArea.firstElementChild);
-                // messageArea.appendChild(section);
-                // localStorage.clear();
-            }
+        // if (localStorage.getItem("addNews") == "true") {
+        for (let i = localStorage.length - 1; i >= 0; i--) {
+            let name = localStorage.key(i);
+            let str = localStorage.getItem(name);
+            console.log(name + "" + str);
+            let obj = JSON.parse(str);
+            let section = document.createElement("section");
+            section.classList.add("news");
+            let header = document.createElement("header");
+            let span1 = document.createElement("span");
+            let a = document.createElement("a");
+            var textNode = document.createTextNode(obj.header);
+            a.appendChild(textNode);
+            a.setAttribute("href", "mainComuniPage.html");
+            a.classList.add("childA");
+            span1.appendChild(a);
+            let span2 = document.createElement("span");
+            textNode = document.createTextNode(obj.date);
+            span2.appendChild(textNode);
+            header.append(span1, span2);
+            let article = document.createElement("article");
+            let main = document.createElement("main");
+            textNode = document.createTextNode(obj.content);
+            main.append(textNode);
+            article.appendChild(main);
+            section.append(header, article);
+            messageArea.insertBefore(section, messageArea.firstElementChild);
+        }
 
+        for(let i=0;i<childA.length;i++)
+        //  childA[i].addEventListener("click",function(event)
+        //  {
+        //     //  event.stopPropagation();
+        //     alert(event.bubbles);
+        //  });
+        childA[i].onclick = function(event)
+        {
+            
+        }
+
+        for (let i = 0; i < news.length; i++) {
+            // childA[i].addEventListener("click", function (event) {
+            //     //  event.stopPropagation();
+            //     // alert(event.bubbles);
+            //     console.log(event.bubbles);
+            // });
+            //  alert(childA[i].innerHTML);
+            // news[i].addEventListener("click", function (event) {
+            //     window.open('mainComuniPage.html', '_self');
+            // });
+            news[i].onclick = function(event)
+            {
+                window.open('mainComuniPage.html', '_self');
+            }
+           
+           
+        }
             // }
         // }
     </script>

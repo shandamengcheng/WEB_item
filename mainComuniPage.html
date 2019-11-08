@@ -12,7 +12,7 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="mainPage.html" >首页</a></li>
             <li><a href="system.html">众包系统</a></li>
             <li><a href="communicatePage.html" class="active">论坛交流</a></li>
             <li><a href="aboutUs.html">关于我们</a></li>
@@ -20,8 +20,66 @@
             <li><a href="login.html">登录</a></li>
         </ul>
     </nav>
+    <main id = "newsDetail">
+        <!-- 内容和评论 -->
+        <article id = "contentAndComments">
+            <div id = "newsHeader">计算机男神</div>
+            <div id = "comments">
+                <section class = "comment">
+                    <div class = "commenter">
+                        <img src = "background.png" class = "userImg"> 
+                        <span>楼主</span>
+                        <input type = "text" value = "帅气的小朱哥" disabled class = "nameInput">
 
+                    </div>
+                    <div class = "commentContext">
+                          <!-- <textarea disabled> -->
+                                小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥
+                          <!-- </textarea> -->
+                    </div>
+                </section>
+                <section class = "comment">
+                    <div class = "commenter">
+                        <img src = "background.png" class = "userImg"> 
+                        
+                        <input type = "text" value = "帅气的小朱哥" disabled class = "nameInput">
+
+                    </div>
+                    <div class = "commentContext">
+                          <!-- <textarea disabled> -->
+                                小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥
+                          <!-- </textarea> -->
+                    </div>
+                </section>
+                <section class = "comment">
+                    <div class = "commenter">
+                        <img src = "background.png" class = "userImg"> 
+                       
+                        <input type = "text" value = "帅气的小朱哥" disabled class = "nameInput">
+
+                    </div>
+                    <div class = "commentContext">
+                          <!-- <textarea disabled> -->
+                                小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥小朱哥
+                                <div class= "imageContainer"></div>
+                          <!-- </textarea> -->
+                    </div>
+                </section>
+            </div>
+            <div id = "sendComment">
+                <div class = "commentText">
+                    <textarea class = "commentText"></textarea>
+                </div>
+                <div class = "imageContainer"></div>
+                <input type = "file" title = "添加图片" class = "add-photo-btn">
+                <input type= "text" value  = "添加图片" class = "background-photo-btn" disabled>
+                <input type = "button" value = "发布" id = "sendCom">
+            </div>
+        </article>
+    </main>
     
+
+  
 </body>
 
 </html>
