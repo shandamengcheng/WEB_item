@@ -70,13 +70,37 @@
                 <div class = "commentText">
                     <textarea class = "commentText"></textarea>
                 </div>
-                <div class = "imageContainer"></div>
+                <div id = "imageContainer"></div>
                 <input type = "file" title = "添加图片" class = "add-photo-btn">
                 <input type= "text" value  = "添加图片" class = "background-photo-btn" disabled>
                 <input type = "button" value = "发布" id = "sendCom">
             </div>
         </article>
     </main>
+<script>
+    var addPhotoBtn = document.getElementsByClassName("add-photo-btn")[0];
+    var imgCount = 0;
+    var imageContainer = document.getElementById("imageContainer");
+    addPhotoBtn.onchange = function () {
+            imgCount++;
+            let file = addPhotoBtn.files[0];
+            if (imgCount <= 6) {
+
+                let img = document.createElement("img");
+                img.classList.add("obj");
+                img.file = file;
+                imageContainer.appendChild(img);
+
+                //创建FileReader来处理异步的图片加载并把他赋给img元素
+                let reader = new FileReader();
+                reader.onload = (function (aImg) { return function (e) { aImg.src = e.target.result; }; })(img);
+                reader.readAsDataURL(file);
+            }
+            else {
+                alert("已达最大限额!");
+            }
+        }
+</script>
     
 
   

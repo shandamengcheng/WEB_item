@@ -1473,17 +1473,21 @@ footer a
     /* border:none; */
     font-size:1.2em;
 }
-.imageContainer 
+.imageContainer ,#imageContainer
 {
     width:100%;
-    height:50px;
+    height:100px;
+}
+#imageContainer 
+{
+    margin-top:2%;
 }
 .add-photo-btn 
 {
     position:absolute;
     width:8%;
-    left:0;
-    top:62.5%;
+    left:10%;
+    top:86%;
     height:7%;
     opacity:0;
 }
@@ -1494,6 +1498,8 @@ footer a
     text-align: center;
     background:white;
     height:7%;
+    margin-left:10%;
+    margin-top:2%;
     border:1px solid red;
 }
 #sendCom 
@@ -1504,4 +1510,6 @@ footer a
     letter-spacing: .5em;
     background:#90c52a;
     outline:none;
+    margin-left:60%;
+    margin-top:2%;
 }
