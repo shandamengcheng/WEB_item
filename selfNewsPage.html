@@ -1,0 +1,123 @@
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="main.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <ul>
+            <li><a href="mainPage.html">首页</a></li>
+            <li><a href="system.html">众包系统</a></li>
+            <li><a href="communicatePage.html" class="active">论坛交流</a></li>
+            <li><a href="aboutUs.html">关于我们</a></li>
+            <li><a href="selfPage.html">个人中心</a></li>
+            <li><a href="login.html">登录</a></li>
+        </ul>
+    </nav>
+    <div class="messageArea selfNews">
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+        <section class="news">
+            <header>
+                <span><a href=" " class="childA">★ 姜欣彤承认和陈晓乳的恋情</a></span><span>2019/9/23</span>
+            </header>
+            <article>
+                <main>
+                    新恋情！新恋情！
+                    姜美丽在东门·······
+                </main>
+            </article>
+            <footer>
+                <input type="button" class="deleteNews" value="删除">
+            </footer>
+        </section>
+    </div>
+    <script>
+        var deleteNews = document.getElementsByClassName("deleteNews");
+        var selfNews = document.getElementsByClassName("selfNews")[0];
+
+        for (let i = 0, len = deleteNews.length; i < len; i++) {
+            deleteNews[i].addEventListener("click",function(event)
+            {
+                var deleteNode = event.target.parentNode.parentNode;
+                console.log(deleteNode.innerHTML);
+                selfNews.removeChild(deleteNode);
+            });
+        }
+    </script>
+</body>
+
+</html>

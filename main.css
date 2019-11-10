@@ -1512,3 +1512,36 @@ footer a
     margin-left:60%;
     margin-top:2%;
 }
+
+/* 个人论坛消息（已发送）页面 */
+.selfNews 
+{
+    
+    width:70%;
+    margin:0 auto;
+    margin-top:6%;
+}
+.deleteNews 
+{
+    display:block;
+    height:30%;
+    width:8%;
+    outline:none;
+    margin-left:92%;
+    background:transparent;
+    border:none;
+    letter-spacing: .2em;
+    color:#90c52a;
+    font-size: 1.2em;
+    /* border:1px solid red; */
+}
+.deleteNews:hover 
+{
+    /* background:rgb(168, 163, 163); */
+    color:green;
+}
+.deleteNews:active 
+{
+    box-shadow:0px 0px 5px #90c52a;
+    color:green;
+}
