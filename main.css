@@ -7,7 +7,7 @@ body {
     width: 1366px;
     overflow-x:hidden;
     color:rgb(89,89,89);
-    
+    margin:0 auto;
 }
 .navbar {
     padding: 0;
