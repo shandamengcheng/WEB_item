@@ -133,12 +133,15 @@
             }
         }
 
+
         for(let i=0,len = sortContent.length;i<len;i++)
         sortContent[i].onclick = function()
-        {
-             let imageValue = sortContent[i].style.backgroundImage;
-             alert(imageValue);
-            sortContent[i].style.backgroundImage = "url(sort2.png)";
+        { 
+             let imageValue = document.defaultView.getComputedStyle(sortContent[i],null).backgroundImage;
+            if(imageValue.lastIndexOf("sort1.png") > 0 )
+            sortContent[i].style.backgroundImage = "url(sort2.png)"
+            else 
+            sortContent[i].style.backgroundImage = "url(sort1.png)"
         }
     </script>
 </body>

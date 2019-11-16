@@ -408,6 +408,7 @@ font-size:1.2em;
     background-repeat: no-repeat;
     background-position:top 5px right 25%;
     background-size:20% 50%;
+    cursor: pointer;
 }
 .contentArea 
 {
@@ -472,14 +473,24 @@ font-size:1.2em;
 {
     background:rgb(243, 235, 235);
 }
+.news header 
+{
+    display:flex;
+    justify-content:start;
+}
+.news article 
+{
+    height:45%;
+}
 .news span
 {
-    display:block;
+    display:inline-block;
     font-weight:700;
     font-size:1.2em;
 }
 .news span:nth-child(2)
 {
+    margin-left:auto;
     font-weight:700;
     font-size:1.2em;
 }
