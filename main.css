@@ -152,13 +152,19 @@ a:hover::before {
     justify-content: space-evenly;
     margin-top: 5%;
 }
-
+.jump-to-text 
+{
+    display:block;
+    width:40%;
+    text-decoration:none;
+}
 .text .colu {
     background: #90c52a;
-    width: 30%;
+    width: 80%;
     display: flex;
     flex-direction: column;
     padding: .3em;
+    margin:0 auto;
     margin-bottom:8%;
 }
 
@@ -689,7 +695,7 @@ footer a
     left:0;
     opacity: 0.9;
     z-index:102;
-    background:#90c52a;
+    background:rgb(89,89,89);
 }
 #detail 
 {
