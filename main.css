@@ -392,12 +392,22 @@ background:rgba(255, 255, 255, 0.678);
     vertical-align: middle;
 
 }
+
 .searchArea span 
 {
 display:inline-block;
 width:13%;
 height:50%;
+/* line-height: 50%; */
+vertical-align: middle;
 font-size:1.2em;
+}
+.sortContent 
+{
+    background-image:url(sort1.png);
+    background-repeat: no-repeat;
+    background-position:top 5px right 25%;
+    background-size:20% 50%;
 }
 .contentArea 
 {

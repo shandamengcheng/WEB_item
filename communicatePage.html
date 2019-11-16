@@ -23,8 +23,8 @@
         <div class="searchArea">
             <input type="text" class="searchInput">
             <input type="button" value="搜索" class="searchBtn">
-            <span>发布日期</span>
-            <span>热度</span>
+            <span class = "sortContent">发布日期</span>
+            <span class = "sortContent">发布热度</span>
         </div>
         <div class="contentArea">
             <div class="floorOwner">
@@ -91,10 +91,7 @@
         var messageArea = document.getElementsByClassName("messageArea")[0];
         var news = document.getElementsByClassName("news");
         var childA = document.getElementsByClassName("childA");
-        // alert(localStorage.object);
-        // messageArea.append(localStorage.object);
-        // window.onload = function () {
-        // if (localStorage.getItem("addNews") == "true") {
+        var sortContent = document.getElementsByClassName("sortContent");
         for (let i = localStorage.length - 1; i >= 0; i--) {
             let name = localStorage.key(i);
             let str = localStorage.getItem(name);
@@ -124,11 +121,6 @@
         }
 
         for(let i=0;i<childA.length;i++)
-        //  childA[i].addEventListener("click",function(event)
-        //  {
-        //     //  event.stopPropagation();
-        //     alert(event.bubbles);
-        //  });
         childA[i].onclick = function(event)
         {
             
@@ -139,11 +131,15 @@
             {
                 window.open('mainComuniPage.html', '_self');
             }
-           
-           
         }
-            // }
-        // }
+
+        for(let i=0,len = sortContent.length;i<len;i++)
+        sortContent[i].onclick = function()
+        {
+             let imageValue = sortContent[i].style.backgroundImage;
+             alert(imageValue);
+            sortContent[i].style.backgroundImage = "url(sort2.png)";
+        }
     </script>
 </body>
 
