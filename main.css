@@ -658,6 +658,7 @@ background:none;
 }
 .usInfor div:first-child 
 {
+    height:40%;
     text-align:center;
     font-size: 2.5em;
     /* border:2px solid #56A742; */
@@ -678,12 +679,17 @@ background:none;
 }
 .usInfor div:nth-child(2)
 {
+    height:60%;
     background:#d6e156;
-    /* border:2px solid #a0ad12; */
+   
     text-overflow:ellipsis; 
     color:white;
-    text-align: center;
+    text-align: left;
     border-radius: 0 0 30px 30px;
+}
+.usInfor:nth-child(3) div:last-child 
+{
+    font-size:0.94em;
 }
 footer 
 {
@@ -1571,4 +1577,123 @@ footer a
 {
     box-shadow:0px 0px 5px #90c52a;
     color:green;
+}
+
+/* 情系侨批 && 侨人侨语 */
+#words-main-part, #records-main-part
+{
+    margin-top:3.1%;
+}
+.wordsImage,.records-background-image
+{
+    display:block;
+    width:100%;
+    height:300px;
+}
+#letter-information-container
+{
+    display: flex;
+    justify-content:start;
+    flex-direction: row;
+    margin-top:3%;
+}
+#records-detail ,#recommend-records
+{
+    margin-left:5%;
+    width:30%;
+    display:inline-block;
+    height:500px;
+}
+#recommend-records 
+{
+    margin-left:auto;
+    margin-top:5%;
+    /* border:1px solid #90c52a; */
+    border-radius: 50px;
+    margin-right:5%;
+    background:#d6e156
+    /* position:fixed; */
+}
+.letter-list
+{
+    list-style: none;
+    padding:0;
+}
+.letter-list span 
+{
+    display:block;
+    font-size:0.8em;
+    padding-right:.2em;
+    text-align: right;
+}
+.letter-list  li 
+{
+    height:10%;
+}
+.letter-list li:first-child
+{
+    margin-top:7%;
+}
+.letter-list a 
+{
+    color:rgb(89,89,89);
+    text-decoration:none;
+}
+.part-title 
+{
+    width:90%;
+    margin-top:6%;
+    margin-left:1%;
+    padding-left: 2%;;
+    border-bottom:1px solid black;
+}
+#records-detail .part-title:nth-child(1)
+{
+    width:30%;
+    border-bottom:1px solid #d6e156;
+}
+
+
+/* 详情页 */
+#message-title
+{
+    width:100%;
+    height:20%;
+    margin-top:6%;
+}
+.makerphone 
+{
+    display:inline;
+    width:10%;
+    height:100%;
+    margin-left:3%;
+    vertical-align: bottom;
+}
+.title-message-container 
+{
+    display:inline-block;
+    height:100%;
+    width:80%;
+    vertical-align: bottom;
+    /* margin-left:20%; */
+}
+.qiaopi-title
+{
+    margin-top:2.3%;
+    letter-spacing: .2em;
+}
+.title-message-container p
+{
+text-align: right;
+}
+.text-area 
+{
+    margin-top:5%;
+    width:100%;
+    height:100%;
+    border:none;
+    font-size:1.4em;
+    text-align: left;
+    color:rgb(89,89,89);
+    font-weight:700;
 }
